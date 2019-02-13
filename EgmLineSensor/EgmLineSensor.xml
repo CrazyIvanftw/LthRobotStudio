@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<lc:LibraryCompiler xmlns:lc="urn:abb-robotics-robotstudio-librarycompiler"
+										xmlns="urn:abb-robotics-robotstudio-graphiccomponent"
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xsi:schemaLocation="urn:abb-robotics-robotstudio-librarycompiler file:///C:\Program%20Files%20(x86)\ABB%20Industrial%20IT\Robotics%20IT\SDK\RobotStudio%20SDK%206.07\LibraryCompilerSchema.xsd
+                                        urn:abb-robotics-robotstudio-graphiccomponent file:///C:\Program%20Files%20(x86)\ABB%20Industrial%20IT\Robotics%20IT\SDK\RobotStudio%20SDK%206.07\GraphicComponentSchema.xsd">
+	<lc:Library fileName="EgmLineSensor.rslib">
+		<lc:DocumentProperties>
+			<lc:Author>sas10gau</lc:Author>
+			<lc:Image source="EgmLineSensor.png"/>
+		</lc:DocumentProperties>
+		<SmartComponent name="EgmLineSensor" icon="EgmLineSensor.png"
+										codeBehind="EgmLineSensor.CodeBehind,EgmLineSensor.dll"
+										canBeSimulated="true">
+      <Properties>
+        <DynamicProperty name="SensorID" valueType="System.Int32" value="1">
+          <Attribute key="Quantity" value="None"/>
+        </DynamicProperty>
+        <DynamicProperty name="PortNumber" valueType="System.Int32" value="1">
+          <Attribute key="Quantity" value="None"/>
+        </DynamicProperty>
+        <DynamicProperty name="SensedPoint" valueType="ABB.Robotics.Math.Vector3" readOnly="true">
+          <Attribute key="Quantity" value="Length"/>
+        </DynamicProperty>
+        <DynamicProperty name="SensedPart" valueType="ABB.Robotics.RobotStudio.Stations.Part" readOnly="true"/>
+        <DynamicProperty name="End" valueType="ABB.Robotics.Math.Vector3" value="0,0,0.4">
+          <Attribute key="Quantity" value="Length"/>
+        </DynamicProperty>
+        <DynamicProperty name="Start" valueType="ABB.Robotics.Math.Vector3">
+          <Attribute key="Quantity" value="Length"/>
+        </DynamicProperty>
+        <DynamicProperty name="Radius" valueType="System.Double" value="0.02">
+          <Attribute key="Quantity" value="Length"/>
+          <Attribute key="MinValue" value="0"/>
+          <Attribute key="MaxValue" value="0.1"/>
+          <Attribute key="Slider" value="true"/>
+        </DynamicProperty>
+      </Properties>
+      <Bindings>
+      </Bindings>
+      <Signals>
+        <IOSignal name="Active" signalType="DigitalInput" value="1"/>
+        <IOSignal name="SensorOut" signalType="DigitalOutput"/>
+      </Signals>
+			<GraphicComponents>
+			</GraphicComponents>
+			<Assets>
+				<Asset source="EgmLineSensor.dll"/>
+			</Assets>
+		</SmartComponent>
+	</lc:Library>
+</lc:LibraryCompiler>

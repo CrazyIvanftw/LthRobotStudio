@@ -66,7 +66,10 @@ namespace EgmFramework
                     seqNbr++;
                     // Send the message
                     byte[] datagram = monitor.Read(_portNbr, _mType);
-                    var byteSent = udpClient.SendAsync(datagram, datagram.Length, remoteEP);
+                    if(datagram != null)
+                    {
+                        var byteSent = udpClient.SendAsync(datagram, datagram.Length, remoteEP);
+                    }
                 }
                 else if (seqNbr != 0 && timeoutCounter > _timeout)
                 {
@@ -80,7 +83,8 @@ namespace EgmFramework
 
         public void Stop()
         {
-            throw new NotImplementedException();
+            exitThread = true;
+            thread = null;
         }
     }
 }

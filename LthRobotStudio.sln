@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EgmFramework", "EgmFramework\EgmFramework.csproj", "{4834583C-303C-4F93-8E4A-8CFDCE1BC684}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EgmFramework", "EgmFramework\EgmFramework.csproj", "{4834583C-303C-4F93-8E4A-8CFDCE1BC684}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EgmLineSensor", "EgmLineSensor\EgmLineSensor.csproj", "{996EBE59-7EC1-49CD-BDB4-7F09D1F41378}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EgmEndpoint", "EgmEndpoint\EgmEndpoint.csproj", "{EB463EEF-00F8-4FB0-BD96-0B6CF94F3BCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EgmMessageProtocols", "EgmMessageProtocols\EgmMessageProtocols.csproj", "{9D0028B0-FC0D-48F7-85E4-929EC2FB0F4B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{4834583C-303C-4F93-8E4A-8CFDCE1BC684}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4834583C-303C-4F93-8E4A-8CFDCE1BC684}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4834583C-303C-4F93-8E4A-8CFDCE1BC684}.Release|Any CPU.Build.0 = Release|Any CPU
+		{996EBE59-7EC1-49CD-BDB4-7F09D1F41378}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{996EBE59-7EC1-49CD-BDB4-7F09D1F41378}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{996EBE59-7EC1-49CD-BDB4-7F09D1F41378}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{996EBE59-7EC1-49CD-BDB4-7F09D1F41378}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB463EEF-00F8-4FB0-BD96-0B6CF94F3BCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB463EEF-00F8-4FB0-BD96-0B6CF94F3BCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB463EEF-00F8-4FB0-BD96-0B6CF94F3BCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB463EEF-00F8-4FB0-BD96-0B6CF94F3BCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D0028B0-FC0D-48F7-85E4-929EC2FB0F4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D0028B0-FC0D-48F7-85E4-929EC2FB0F4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D0028B0-FC0D-48F7-85E4-929EC2FB0F4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D0028B0-FC0D-48F7-85E4-929EC2FB0F4B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
