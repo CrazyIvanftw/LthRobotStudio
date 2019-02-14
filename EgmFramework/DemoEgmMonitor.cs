@@ -90,7 +90,7 @@ namespace EgmFramework
                     };
                     break;
 
-                case (int)EgmPortNumbers.SENSOR_PORT:
+                case (int)EgmPortNumbers.LINE_SENSOR_PORT:
                     LineSensor state = LineSensor.CreateBuilder().MergeFrom(data).Build();
                     if (state.SensorID == 42)
                     {

@@ -13,9 +13,9 @@ namespace EgmEndpoint
     public class CodeBehind : SmartComponentCodeBehind
     {
 
-        IEgmMonitor monitor;
-        IEgmUdpThread egmPositionGuidance;
-        IEgmUdpThread egmLineSensor;
+        IEgmMonitor monitor = null;
+        IEgmUdpThread egmPositionGuidance = null;
+        IEgmUdpThread egmLineSensor = null;
 
         public override void OnPropertyValueChanged(SmartComponent component, DynamicProperty changedProperty, Object oldValue)
         {
@@ -43,7 +43,7 @@ namespace EgmEndpoint
             }
             monitor = new DemoEgmMonitor();
             egmPositionGuidance = new EgmUdpThread((int)EgmPortNumbers.POS_GUIDE_PORT, 4, 50);
-            egmLineSensor = new EgmUdpThread((int)EgmPortNumbers.SENSOR_PORT, 4, 50);
+            egmLineSensor = new EgmUdpThread((int)EgmPortNumbers.LINE_SENSOR_PORT, 4, 50);
             egmPositionGuidance.StartUdp(monitor);
             egmLineSensor.StartUdp(monitor);
         }
