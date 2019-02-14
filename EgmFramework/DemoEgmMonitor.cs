@@ -12,13 +12,13 @@ namespace EgmFramework
     {
         private int seqNbr = 0;
         private double offset = 145.0;  //the demo head has a radius of 145mm 
-        private double sensedY;
         private double[] feedback = new double[] {0.0 ,0.1, 0.2};
         private double[] sensedPoint = new double[] { 0.0, 0.1, 0.2 };
 
 
         public byte[] Read(int udpPortNbr)
         {
+            
 
             byte[] data;
 
@@ -64,15 +64,21 @@ namespace EgmFramework
                     break;
 
                 default:
+                    Debug.WriteLine($"No defined Read() case for data going to port {udpPortNbr}.");
                     data = null;
                     break;
             }
+            //if(data != null)
+            //{
+            //    Debug.WriteLine($"Sending data to {udpPortNbr}");
+            //}
 
             return data;
         }
 
         public void Write(int udpPortNbr, byte[] data)
         {
+            //Debug.WriteLine($"Received data from {udpPortNbr}");
             switch (udpPortNbr)
             {
                 case (int)EgmPortNumbers.POS_GUIDE_PORT:
@@ -98,7 +104,7 @@ namespace EgmFramework
                     break;
 
                 default:
-                    Debug.WriteLine("you need to implement an EgmUdpBase class...");
+                    Debug.WriteLine($"No defined Write() case for data coming from port {udpPortNbr}.");
                     break;
             }
         }
