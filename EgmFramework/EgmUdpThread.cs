@@ -6,20 +6,18 @@ using System.Threading;
 
 namespace EgmFramework
 {
-    public abstract class EgmUdpBase : IEgmUdpBase
+    public class EgmUdpThread : IEgmUdpThread
     {
         private static int _portNbr;
-        private static int _mType;
         private static int _sleepTimeDefault;
         private static int _timeout;
         private int seqNbr = 0;
         private bool exitThread = false;
         private Thread thread;
 
-        public EgmUdpBase(int portNbr, int mType, int sleepTimeDefault, int timeout)
+        public EgmUdpThread(int portNbr, int sleepTimeDefault, int timeout)
         {
             _portNbr = portNbr;
-            _mType = mType;
             _sleepTimeDefault = sleepTimeDefault;
             _timeout = timeout;
         }
@@ -61,11 +59,11 @@ namespace EgmFramework
                 if (data != null)
                 {
                     //ProcessData(udpClient, remoteEP, data, monitor);
-                    monitor.Write(_portNbr, _mType, data);
+                    monitor.Write(_portNbr, data);
                     timeoutCounter = 0;
                     seqNbr++;
                     // Send the message
-                    byte[] datagram = monitor.Read(_portNbr, _mType);
+                    byte[] datagram = monitor.Read(_portNbr);
                     if(datagram != null)
                     {
                         var byteSent = udpClient.SendAsync(datagram, datagram.Length, remoteEP);

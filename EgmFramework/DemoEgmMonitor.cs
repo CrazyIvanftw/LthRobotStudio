@@ -8,7 +8,7 @@ using System.Text;
 
 namespace EgmFramework
 {
-    class DemoEgmMonitor : IEgmMonitor
+    public class DemoEgmMonitor : IEgmMonitor
     {
         private int seqNbr = 0;
         private double offset = 145.0;  //the demo head has a radius of 145mm 
@@ -17,7 +17,7 @@ namespace EgmFramework
         private double[] sensedPoint = new double[] { 0.0, 0.1, 0.2 };
 
 
-        public byte[] Read(int udpPortNbr, int messageType)
+        public byte[] Read(int udpPortNbr)
         {
 
             byte[] data;
@@ -71,7 +71,7 @@ namespace EgmFramework
             return data;
         }
 
-        public void Write(int udpPortNbr, int messageType, byte[] data)
+        public void Write(int udpPortNbr, byte[] data)
         {
             switch (udpPortNbr)
             {

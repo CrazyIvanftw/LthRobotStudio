@@ -70,6 +70,12 @@
     <None Include="EgmEndpoint.png" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EgmFramework\EgmFramework.csproj">
+      <Project>{4834583C-303C-4F93-8E4A-8CFDCE1BC684}</Project>
+      <Name>EgmFramework</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

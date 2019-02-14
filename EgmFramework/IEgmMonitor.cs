@@ -14,7 +14,7 @@ namespace EgmFramework
         /// <param name="udpPortNbr"></param>
         /// <param name="messageType"></param>
         /// <param name="data"></param>
-        void Write(int udpPortNbr, int messageType, byte[] data);
+        void Write(int udpPortNbr, byte[] data);
 
         /// <summary>
         /// When an EgmUdpBase instance needs to send a message, it calles the Read method of the EgmMonitor. It is the job of the EgmMonitor 
@@ -23,6 +23,6 @@ namespace EgmFramework
         /// <param name="udpPortNbr"></param>
         /// <param name="messageType"></param>
         /// <returns></returns>
-        byte[] Read(int udpPortNbr, int messageType);
+        byte[] Read(int udpPortNbr);
     }
 }

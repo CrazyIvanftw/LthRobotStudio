@@ -11,7 +11,7 @@ namespace EgmFramework
     /// a worker thread using the StartUdpThread method. Calling the Stop method will cause the worker thread to exit and return safely, then it will remove references 
     /// to the thread so it will be cleaned up correctly.
     /// </summary>
-    public interface IEgmUdpBase
+    public interface IEgmUdpThread
     {
         /// <summary>
         /// Starts the EgmUdpBase by instantiating and starting a worker thread that handles the udp receive and send functions.
