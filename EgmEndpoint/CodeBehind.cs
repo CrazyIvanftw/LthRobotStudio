@@ -15,7 +15,8 @@ namespace EgmEndpoint
 
         IEgmMonitor monitor = null;
         IEgmUdpThread egmPositionGuidance = null;
-        IEgmUdpThread egmLineSensor = null;
+        IEgmUdpThread egmLineSensor = null
+            ;
 
         public override void OnPropertyValueChanged(SmartComponent component, DynamicProperty changedProperty, Object oldValue)
         {
