@@ -6,6 +6,17 @@ using System.Threading;
 
 namespace EgmFramework
 {
+    /// <summary>
+    /// This is an implementation of the IEgmUdpThread interface. The purpose of this class 
+    /// is to act as a wrapper for a worker thread that handles UDP communication for EGM. 
+    /// In this implementation, the worker thread will periodically check the udp buffer for 
+    /// data to write to its monitor and then try to reply to the client that last sent it 
+    /// a message with data it reads for its monitor. If there is data in the buffer, the 
+    /// worker thread not sleep before trying to read from its udp buffer again. If there is 
+    /// no data in the udp buffer, the thread will sleep for a number of miliseconds specified 
+    /// at the creation of the class. 
+    /// </summary>
+    /// <seealso cref="EgmFramework.IEgmUdpThread"/>
     public class EgmUdpThread : IEgmUdpThread
     {
         private int portNbr;
@@ -15,6 +26,13 @@ namespace EgmFramework
         private bool exitThread = false;
         private Thread thread;
 
+        /// <summary>
+        /// To create an instance of the EgmUdpThread class: assign it a port, define the 
+        /// default sleep time in ms, and the timeout in ms.
+        /// </summary>
+        /// <param name="portNbr"></param>
+        /// <param name="sleepTimeDefault"></param>
+        /// <param name="timeout"></param>
         public EgmUdpThread(int portNbr, int sleepTimeDefault, int timeout)
         {
             this.portNbr = portNbr;

@@ -11,6 +11,7 @@ namespace EgmFramework
     /// a worker thread using the StartUdpThread method. Calling the Stop method will cause the worker thread to exit and return safely, then it will remove references 
     /// to the thread so it will be cleaned up correctly.
     /// </summary>
+    /// <seealso cref="EgmFramework.EgmUdpThread"/>
     public interface IEgmUdpThread
     {
         /// <summary>

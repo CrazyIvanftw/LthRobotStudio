@@ -42,8 +42,8 @@ namespace EgmEndpoint
                 monitor = null;
             }
             monitor = new DemoEgmMonitor();
-            egmPositionGuidance = new EgmUdpThread((int)EgmPortNumbers.POS_GUIDE_PORT, 4, 50);
-            egmLineSensor = new EgmUdpThread((int)EgmPortNumbers.LINE_SENSOR_PORT, 4, 50);
+            egmPositionGuidance = new EgmUdpThread((int)DemoEgmPortNumbers.POS_GUIDE_PORT, 4, 50);
+            egmLineSensor = new EgmUdpThread((int)DemoEgmPortNumbers.LINE_SENSOR_PORT, 4, 50);
             egmPositionGuidance.StartUdp(monitor);
             egmLineSensor.StartUdp(monitor);
         }
